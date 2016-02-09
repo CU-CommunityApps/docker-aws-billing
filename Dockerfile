@@ -1,11 +1,11 @@
-FROM docker.cucloud.net/base
+FROM dtr.cucloud.net/cs/base
 
 # File Author / Maintainer
 MAINTAINER Shawn Bower <shawn.bower@gmail.com>
 
 RUN \
   apt-get update && apt-get install -y \
-    libmysqlclient-dev && \ 
+    libmysqlclient-dev && \
   rm -rf /var/lib/apt/lists/*
 
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
